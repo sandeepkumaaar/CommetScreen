@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CommentScreen</string>
+    <string name="tv_title">निर्माण अर्थपूर्ण तरीके जनित हमारी कुशलता स्थापित अनुवाद एछित जाने दर्शाता</string>
+    <string name="shikha_gupta">- Shikha Gupta</string>
+    <string name="comments">Comments</string>
+    <string name="et_hint">यहाँ लिखें ...</string>
+    <string name="backbutton">backButton</string>
+    <string name="userimage">userImage</string>
+    <string name="playicon">playIcon</string>
+    <string name="onlyme_icon">onlyMe_icon</string>
+    <string name="title">अपने बनाए गए वीडियो को शीर्षक दें:</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imgcolose">Imgcolose</string>
+</resources>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/myToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:tint="@android:color/black"
+            android:contentDescription="@string/backbutton"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/ll_addComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        android:layout_below="@id/myToolbar">
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/sk"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/userimage"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/play"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/playicon"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans_bold"
+                android:text="@string/title"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="7"
+                android:gravity="top"
+                android:paddingTop="8dp"
+                android:paddingStart="8dp"
+                android:hint="@string/et_hint"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"
+                android:background="@drawable/border"
+                android:layout_marginTop="7dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="अक्षर शेष : 120"
+                android:textSize="14sp"
+                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@android:color/darker_gray"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_onlyme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/round_border"
+                        android:padding="6dp"
+                        android:layout_marginEnd="7dp">
+
+                        <ImageView
+                            android:id="@+id/ic_onlyme"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/onlyme_grey"
+                            android:tint="@android:color/darker_gray"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/onlyme_icon"/>
+
+                        <TextView
+                            android:id="@+id/tv_onlyme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="only me"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_marginEnd="5dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_public"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/round_border"
+                        android:padding="6dp">
+
+                        <ImageView
+                            android:id="@+id/ic_public"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/public_grey"
+                            android:tint="@android:color/darker_gray"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/onlyme_icon"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_public"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="public"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_marginEnd="5dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/noto_sans_bold"
+        android:text="ठीक है"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"
+        android:background="@drawable/color_border"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ll_addComment"/>
+
+</RelativeLayout>

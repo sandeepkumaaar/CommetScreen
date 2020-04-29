@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".OtpFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        android:tint="@android:color/black"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/imgcolose"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/img_close"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/noto_sans_bold"
+                android:text="कृपया आपके मोबाइल पर भेजे गए"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_bold"
+                    android:textSize="20sp"
+                    android:textColor="#d71920"
+                    android:text="वेरिफिकेशन कोड"
+                    android:layout_marginEnd="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_bold"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:text="दर्ज करें"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/opt_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:inputType="number"
+                android:gravity="center"
+                android:maxLength="1"
+                android:textColor="#8C8C8C"
+                android:nextFocusRight="@id/opt_2"
+                android:background="@drawable/border"
+                android:layout_marginEnd="8dp"
+                android:cursorVisible="false"/>
+
+            <requestFocus/>
+
+            <EditText
+                android:id="@+id/opt_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:inputType="number"
+                android:gravity="center"
+                android:maxLength="1"
+                android:textColor="#8C8C8C"
+                android:background="@drawable/border"
+                android:layout_marginEnd="8dp"
+                android:cursorVisible="false"/>
+
+            <EditText
+                android:id="@+id/opt_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:inputType="number"
+                android:gravity="center"
+                android:maxLength="1"
+                android:textColor="#8C8C8C"
+                android:background="@drawable/border"
+                android:layout_marginEnd="8dp"
+                android:cursorVisible="false"/>
+
+            <EditText
+                android:id="@+id/otp_4"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:inputType="number"
+                android:gravity="center"
+                android:maxLength="1"
+                android:textColor="#8C8C8C"
+                android:background="@drawable/border"
+                android:cursorVisible="false"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/noto_sans_bold"
+            android:text="सबमीट करे"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:background="@drawable/color_border" />
+
+    </LinearLayout>
+
+</RelativeLayout>
