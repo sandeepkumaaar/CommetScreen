@@ -13,4 +13,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="imgcolose">Imgcolose</string>
+    <string name="tv_sms">आपका वीडियो हमने मॉडरेशन के \n लिए भेज दिए हैं, हम आपसे sms के \n द्वारा जल्द संपर्क करेंगे</string>
+    <string name="thikhai">ठीक है</string>
+    <string name="thanku">धन्यवाद !</string>
 </resources>

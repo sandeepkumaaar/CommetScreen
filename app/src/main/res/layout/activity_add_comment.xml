@@ -2,8 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@android:color/white"
-    android:orientation="vertical">
+    tools:context=".AddCommentActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/myToolbar"
@@ -66,29 +67,48 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
+                android:fontFamily="@font/noto_sans"
                 android:lines="7"
+                android:maxLength="120"
                 android:gravity="top"
                 android:paddingTop="8dp"
                 android:paddingStart="8dp"
                 android:hint="@string/et_hint"
                 android:textSize="16sp"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#333333"
                 android:background="@drawable/border"
                 android:layout_marginTop="7dp"/>
 
-
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="अक्षर शेष : 120"
-                android:textSize="14sp"
+                android:orientation="horizontal"
                 android:layout_gravity="end"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:textColor="@android:color/darker_gray"/>
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="अक्षर शेष : "
+                    android:textSize="14sp"
+                    android:textColor="#333333"/>
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans"
+                    android:textSize="14sp"
+                    android:text="120"
+                    android:textColor="#333333"/>
+
+            </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -118,9 +138,10 @@
                             android:id="@+id/tv_onlyme"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans"
                             android:text="only me"
                             android:textSize="14sp"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="#000000"
                             android:layout_marginEnd="5dp"/>
 
                     </LinearLayout>
@@ -147,9 +168,10 @@
                             android:id="@+id/tv_public"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans"
                             android:text="public"
                             android:textSize="14sp"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="#000000"
                             android:layout_marginEnd="5dp"/>
 
                     </LinearLayout>

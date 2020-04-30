@@ -3,6 +3,7 @@ package com.example.commetscreen;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,7 +26,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
+
 
     }
 
@@ -35,8 +37,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
+
+        ImageView imageView;
         MyViewHolder(@NonNull View itemView) {
             super(itemView);
+
+            imageView = itemView.findViewById(R.id.imgView_play);
         }
     }
 }
