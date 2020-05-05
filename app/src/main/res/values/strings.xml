@@ -16,4 +16,7 @@
     <string name="tv_sms">आपका वीडियो हमने मॉडरेशन के \n लिए भेज दिए हैं, हम आपसे sms के \n द्वारा जल्द संपर्क करेंगे</string>
     <string name="thikhai">ठीक है</string>
     <string name="thanku">धन्यवाद !</string>
+    <string name="userprofile">userProfile</string>
+    <string name="txt_title">निर्माण अर्थपूर्ण तरीके \n जनित हमारी कुशलता \n स्थापित...</string>
+    <string name="tv_time">2 hrs ago</string>
 </resources>
