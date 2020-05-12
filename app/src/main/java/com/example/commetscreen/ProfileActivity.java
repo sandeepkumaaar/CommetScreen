@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -18,13 +19,13 @@ public class ProfileActivity extends AppCompatActivity {
 
     String url = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTZyKcmOSdtyzyOndU-y7N1Gc42Gv76sfnczKgE4EZj01-P3h8V&usqp=CAU";
 
-    ImageView imageView;
+    ImageView imageView, img_power;
     RecyclerView rv_addComments, rv_bookmarks, rv_mydownloads;
     AddCommentsAdapter addCommentsAdapter;
     AddBookmarksAdapter addBookmarksAdapter;
     DownloadsAdapter downloadsAdapter;
-
     List<String> stringList = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,5 +71,16 @@ public class ProfileActivity extends AppCompatActivity {
 
         downloadsAdapter = new DownloadsAdapter(stringList);
         rv_mydownloads.setAdapter(downloadsAdapter);
+
+        img_power = findViewById(R.id.img_power);
+        img_power.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyDialogFragment myDialogFragment = new MyDialogFragment();
+                myDialogFragment.show(getSupportFragmentManager(), "My Fragment");
+                
+            }
+        });
+
     }
 }

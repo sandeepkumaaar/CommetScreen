@@ -19,4 +19,8 @@
     <string name="userprofile">userProfile</string>
     <string name="txt_title">निर्माण अर्थपूर्ण तरीके \n जनित हमारी कुशलता \n स्थापित...</string>
     <string name="tv_time">2 hrs ago</string>
+    <string name="tv_otp">कृपया आपके मोबाइल पर भेजे गए \n वेरिफिकेशन कोड दर्ज करें</string>
+    <string name="tv_content">इस वीडियो में दी गई सभी जानकारी, घटनास्थल और घटना का समय सही और तथ्यपूर्ण है तथा घटना का वीडियो मेरे क्षेत्र का है! अगर खबर में कोई जानकारी/ बात झूठी या प्रोपोगेंडा के तहत पाई जाती है तो इसके लिए मैं ही ज़िम्मेदार होऊँगा!</string>
+    <string name="tv_agree">मैं सहमत हूँ</string>
+    <string name="tv_disagree">वापस जाएँ</string>
 </resources>

@@ -28,46 +28,17 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/tv_otpScreen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:fontFamily="@font/noto_sans_bold"
-                android:text="कृपया आपके मोबाइल पर भेजे गए"
-                android:textColor="#000000"
-                android:textSize="20sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/noto_sans_bold"
-                    android:textSize="20sp"
-                    android:textColor="#d71920"
-                    android:text="वेरिफिकेशन कोड"
-                    android:layout_marginEnd="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/noto_sans_bold"
-                    android:textSize="20sp"
-                    android:textColor="#000000"
-                    android:text="दर्ज करें"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
+            android:fontFamily="@font/noto_sans_bold"
+            android:text="@string/tv_otp"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:lineSpacingExtra="7dp"
+            android:gravity="center"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,6 +60,7 @@
                 android:gravity="center"
                 android:maxLength="1"
                 android:textColor="#8C8C8C"
+                android:focusable="true"
                 android:nextFocusRight="@id/opt_2"
                 android:background="@drawable/border"
                 android:layout_marginEnd="8dp"
@@ -104,6 +76,7 @@
                 android:inputType="number"
                 android:gravity="center"
                 android:maxLength="1"
+                android:focusable="true"
                 android:textColor="#8C8C8C"
                 android:background="@drawable/border"
                 android:layout_marginEnd="8dp"
@@ -117,6 +90,7 @@
                 android:inputType="number"
                 android:gravity="center"
                 android:maxLength="1"
+                android:focusable="true"
                 android:textColor="#8C8C8C"
                 android:background="@drawable/border"
                 android:layout_marginEnd="8dp"
@@ -130,6 +104,7 @@
                 android:inputType="number"
                 android:gravity="center"
                 android:maxLength="1"
+                android:focusable="true"
                 android:textColor="#8C8C8C"
                 android:background="@drawable/border"
                 android:cursorVisible="false"/>

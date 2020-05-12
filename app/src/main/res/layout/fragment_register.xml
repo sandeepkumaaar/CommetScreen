@@ -28,38 +28,15 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp">
-
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_register"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:fontFamily="@font/noto_sans_bold"
-                android:text="कृपया अपना"
-                android:textColor="#000000"
-                android:textSize="20sp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/noto_sans_bold"
+                android:text="कृपया अपना मोबाइल नंबर दर्ज करें"
                 android:textSize="20sp"
-                android:textColor="#d71920"
-                android:text="मोबाइल नंबर"
-                android:layout_marginEnd="8dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:fontFamily="@font/noto_sans_bold"
-                android:textSize="20sp"
-                android:textColor="#000000"
-                android:text="दर्ज करें"/>
-        </LinearLayout>
+                android:textColor="#000"
+                android:gravity="center"/>
 
         <LinearLayout
             android:layout_width="match_parent"

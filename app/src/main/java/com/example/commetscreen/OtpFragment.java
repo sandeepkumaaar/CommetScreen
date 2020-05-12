@@ -1,5 +1,6 @@
 package com.example.commetscreen;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,7 +9,10 @@ import androidx.fragment.app.Fragment;
 
 import android.os.CountDownTimer;
 import android.text.Editable;
+import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.TextWatcher;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,10 +29,8 @@ public class OtpFragment extends Fragment implements TextWatcher {
     private static final long START_TIME_IN_MILLIS = 30000;
     private boolean mTimerRunning = false;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
-    private CountDownTimer mCountDownTimer;
     private EditText otp_1, opt_2, opt_3, opt_4;
-    private TextView tv_countDown, tv_reSendOtp, tv_submit;
-
+    private TextView tv_countDown;
 
     public OtpFragment() {
         // Required empty public constructor
@@ -45,6 +47,13 @@ public class OtpFragment extends Fragment implements TextWatcher {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        TextView tv_otp = view.findViewById(R.id.tv_otpScreen);
+        String otpText = "कृपया आपके मोबाइल पर भेजे गए वेरिफिकेशन कोड दर्ज करें";
+        SpannableString ss = new SpannableString(otpText);
+        ForegroundColorSpan fcsRed = new ForegroundColorSpan(Color.parseColor("#d71920"));
+        ss.setSpan(fcsRed, 29,44, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        tv_otp.setText(ss);
+
         otp_1 = view.findViewById(R.id.opt_1);
         opt_2 = view.findViewById(R.id.opt_2);
         opt_3 = view.findViewById(R.id.opt_3);
@@ -56,10 +65,10 @@ public class OtpFragment extends Fragment implements TextWatcher {
         opt_4.addTextChangedListener(this);
 
         tv_countDown = view.findViewById(R.id.tv_countDown); // textview Count
-        tv_reSendOtp = view.findViewById(R.id.tv_reSendOtp);
+        TextView tv_reSendOtp = view.findViewById(R.id.tv_reSendOtp);
 
         // for start the timer
-        tv_submit = view.findViewById(R.id.tv_submit);
+        TextView tv_submit = view.findViewById(R.id.tv_submit);
         tv_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,12 +86,13 @@ public class OtpFragment extends Fragment implements TextWatcher {
     }
 
     private void startTimer() {
-         mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
+        CountDownTimer mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 mTimeLeftInMillis = millisUntilFinished;
                 updateCountDownText();
             }
+
             @Override
             public void onFinish() {
                 mTimerRunning = false;
